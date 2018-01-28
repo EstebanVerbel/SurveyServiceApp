@@ -34,5 +34,7 @@ namespace SurveyServiceApp.Models
                 new AttributeToColumnAnnotationConvention<TableColumnAttribute, string>(
                     "ServiceTableColumn", (property, attributes) => attributes.Single().ColumnType.ToString()));
         }
+
+        public System.Data.Entity.DbSet<SurveyServiceApp.DataObjects.SurveyResponse> SurveyResponses { get; set; }
     }
 }
